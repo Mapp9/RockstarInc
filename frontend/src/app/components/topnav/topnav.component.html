@@ -1,0 +1,19 @@
+<mat-toolbar color="primary" class="topnav">
+  <mat-toolbar-row>
+    <span class="logo">
+      <img src="assets/images/logo.png" alt="Company Logo">
+    </span>
+    <span class="spacer"></span>
+    <div class="nav-buttons">
+      <button mat-button>Login</button>
+      <button mat-flat-button>Signup</button>
+    </div>
+    <button mat-icon-button class="mobile-menu-button" (click)="toggleMenu()">
+      <mat-icon>menu</mat-icon>
+    </button>
+  </mat-toolbar-row>
+  <div class="mobile-menu" *ngIf="menuOpen">
+    <button mat-button>Login</button>
+    <button mat-button>Signup</button>
+  </div>
+</mat-toolbar>

@@ -1,0 +1,42 @@
+> .mvn
+    - maven-wrapper.properties
+> .vscode
+    - settings.json
+> src
+    > main 
+        > java
+            > com
+                > rockstarinc
+                    >backend
+                        > config
+                            - SecurityConfig.java
+                        > controller
+                            > user
+                                - AuthController.java
+                        > entity
+                            - User.java
+                        > repository
+                            - UserRepository.java
+                        > service
+                            UserService.java
+                        - BackendApplication.java
+        > resources
+            > static
+            > templates
+            - application.properties
+    > test
+        > java
+            > com
+                > rockstarinc
+                    >backend
+                        - BackendApplicationTests.java
+> target
+    > classes
+        application.properties
+    > generated-sources
+        > annotations
+    > generated-test-sources
+        > test-annotations
+    > test-clases
+- .gitignore
+- HELP.md

@@ -1,0 +1,75 @@
+footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-grid {
+  width: 100%;
+  background-color: #3f51b5; /* Color de fondo del footer */
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.terms-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  h2 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: white;
+  }
+
+  a {
+    margin: 5px 0;
+    font-size: 14px;
+    color: white;
+  }
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+
+  a {
+    color: white; /* Color de los iconos */
+    margin: 0 10px; /* Espaciado entre los iconos */
+  }
+
+  mat-icon {
+    font-size: 24px; /* Tamaño de los iconos */
+  }
+}
+
+.copy-container {
+  background-color: #303f9f; /* Color de fondo diferente para el copyright */
+  color: #ffffff; /* Color del texto */
+  text-align: center;
+  padding: 10px 0; /* Añade padding para el contenedor */
+  font-size: 14px; /* Ajusta el tamaño de la fuente según sea necesario */
+  width: 100%; /* Asegura que ocupe todo el ancho */
+}
+
+@media (min-width: 600px) {
+  .footer-grid {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .terms-container {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .social-icons {
+    justify-content: flex-end;
+  }
+}
