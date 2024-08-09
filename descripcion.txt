@@ -1,0 +1,285 @@
+Descripción general del proyecto:
+* Nombre del proyecto.
+* Objetivos principales.
+* Funcionalidades clave.
+Tecnologías utilizadas:
+* Frameworks y lenguajes de programación para frontend y backend.
+* Base de datos y herramientas de desarrollo.
+Estructura del proyecto:
+* Organización de carpetas y archivos importantes.
+* Servicios, componentes y módulos principales.
+Estado actual del proyecto:
+* Qué funcionalidades ya están implementadas.
+* Qué estás desarrollando ahora.
+* Qué planeas desarrollar a continuación.
+Desafíos actuales:
+* Problemas o dudas específicos que estás enfrentando.
+* Áreas donde te gustaría recibir más orientación.
+Plan de trabajo:
+* Siguientes pasos y prioridades.
+* Plazos o deadlines importantes.
+
+Nombre del proyecto: 
+Aplicativo Web de Comercio Electrónico y Gestión de Contenidos para Rockstar Inc. (Estoy abierto a recomendaciones para cambiar el nombre)
+
+Objetivos:
+
+1. Facilitar la compra y venta de productos: Crear una tienda en línea que permita a los clientes explorar y comprar instrumentos musicales y accesorios desde cualquier lugar.
+2. Gestión de Contenidos:Proporcionar a los administradores de Rockstar Inc. herramientas para gestionar productos, categorías, inventarios y contenido del sitio web.
+3. Gestión de Pedidos: Proporcionar a los administradores de Rockstar Inc. herramientas para gestionar los pedidos como el historial, 
+(Estoy abierto a ideas)
+Tecnologías
+- Spring boot version 3.3.2 
+- Angular 17.3.12
+- Angular Material 17.3.10
+- MySQL
+(No se si falta alguna otra tecnología)
+Funcionalidades:
+
+Módulo de administración: 
+- Acceso seguro de administrador: los administradores pueden iniciar sesión de forma segura, generar tokens y obtener acceso a API autenticadas, todo gracias a nuestro sólido sistema de autenticación y autorización basado en JWT.
+- Gestión de categorías: los administradores tienen el poder de publicar y recuperar categorías de productos sin esfuerzo.
+- Gestión de productos sin esfuerzo: los administradores pueden publicar, actualizar y eliminar productos de manera eficiente, lo que garantiza una gestión fluida de los productos.
+- Supervisión de pedidos: controle de cerca los pedidos realizados y administre fácilmente las actualizaciones del estado de los pedidos (enviados, entregados, en proceso).
+- Análisis avanzado: sumérjase en análisis detallados con nuestra página de análisis, que brinda información sobre pedidos realizados, enviados y en proceso. Además, vea los datos de ventas del mes actual y anteriores.
+- Preguntas frecuentes y cupones: los administradores pueden compartir información valiosa sobre los productos a través de las preguntas frecuentes y ofrecer descuentos mediante la gestión de cupones.
+
+Módulo de clientes: 
+- Acceso seguro de clientes: los clientes pueden iniciar sesión de forma segura, generar tokens y acceder a API autenticadas con el mismo sistema de autenticación y autorización basado en JWT.
+- Descubrimiento de productos: navegue por nuestra amplia selección de productos que se muestran cómodamente en el panel de control.
+- Compras eficientes: agregue uno o varios productos a su carrito de manera simultánea para disfrutar de una experiencia de compra perfecta.
+- Pedidos simplificados: realice pedidos sin esfuerzo después de agregar productos a su carrito y disfrute de descuentos aplicando cupones con los identificadores de cupones.
+- Comparta sus comentarios: los clientes pueden publicar reseñas de los productos entregados, lo que ayuda a otros a tomar decisiones informadas.
+- Lista de deseos: cree su propia lista de deseos agregando los productos que le encantan.
+- Información sobre productos: obtenga detalles completos sobre productos específicos, incluidos detalles del producto, reseñas y preguntas frecuentes, con solo un clic en el nombre del producto.
+- Gestión de perfiles de usuario: los clientes pueden actualizar fácilmente sus perfiles y cambiar sus contraseñas.
+- Seguimiento de sus pedidos: incluso si no ha iniciado sesión, puede realizar un seguimiento de sus pedidos de forma cómoda mediante identificadores de seguimiento.
+
+Estructura del proyecto:
+
+> backend
+    > .mvn
+        - maven-wrapper.properties
+    > .vscode
+        - settings.json
+    > src
+        > main 
+            > java
+                > com
+                    > rockstarinc
+                        >backend
+                            > config
+                                - SecurityConfig.java
+                            > controller
+                                > user
+                                    - AuthController.java
+                            > entity
+                                - User.java
+                            > repository
+                                - UserRepository.java
+                            > service
+                                UserService.java
+                            - BackendApplication.java
+            > resources
+                > static
+                > templates
+                - application.properties
+        > test
+            > java
+                > com
+                    > rockstarinc
+                        >backend
+                            - BackendApplicationTests.java
+    > target
+        > classes
+            application.properties
+        > generated-sources
+            > annotations
+        > generated-test-sources
+            > test-annotations
+        > test-clases
+    - .gitignore
+    - HELP.md
+> frontend
+    - >src
+        - >app
+            - >admin
+                - >components
+                    - >dashboard
+                        - dashboard.component.html
+                        - dashboard.component.scss
+                        - dashboard.component.spec.ts
+                        - dashboard.component.ts
+                    - >post-category
+                        - post-category.component.html
+                        - post-category.component.scss
+                        - post-category.component.spec.ts
+                        - post-category.component.ts
+                - >service
+                    - admin.service.spec.ts
+                    - admin.service.ts
+                - admin-routing.module.ts
+                - admin.component.html
+                - admin.component.scss
+                - admin.component.spec.ts
+                - admin.component.ts
+                - admin.module.ts
+            - >customer
+                - >components
+                    - >dashboard
+                        - dashboard.component.html
+                        - dashboard.component.scss
+                        - dashboard.component.spec.ts
+                        - dashboard.component.ts
+                - customer-routing.module.ts
+                - customer.component.html
+                - customer.component.scss
+                - customer.component.spec.ts
+                - customer.component.ts
+                - customer.module.ts
+            - >login
+                - login.component.html
+                - login.component.scss
+                - login.component.spec.ts
+                - login.component.ts
+            - >services
+                - >auth
+                    - auth.service.spec.ts
+                    - auth.service.ts
+                - >storage
+                    - user-storage.service.spec.ts
+                    - user-storage.service.ts
+            - >signup
+                - signup.component.hmtl
+                - signup.component.scss
+                - signup.component.spec.ts
+                - signup.component.ts
+            - app-routing.module.ts
+            - app.component.html
+            - app.component.scss
+            - app.component.spec.ts
+            - app.module.ts
+            - DemoAngularMaterialModule.ts
+        - >assets
+            - .gitkeep
+        - >enviroments
+        - favicon.ico
+        - index.html
+        - main.ts
+        - styles.scss
+    - .editorconfig
+    - .gitignore
+    - angular.json
+    - package-lock.json
+    - package.json
+    - README.md
+    - tsconfig.app.json
+    - tsconfig.json
+    - tsconfig.spec.json
+Estado actual del proyecto
+- Hasta ahora se esta empezando a implementar el registro de usuarios.
+Plan de trabajo
+- Creación y configuración inicial del proyecto en spring boot(hecho)
+- Creación y configuración inicial del proyecto en angular (Hecho)
+- Implementación filtro JWT (en proceso)
+- Crear una utilidad JWT y un filtro de solicitudes
+- API de inicio de sesión y servicio de detalles del usuario
+- API de registro + seguridad web y cuenta de administrador
+- Crear página de registro + llamada a la API y servicio de autenticación
+- Crear página de inicio de sesión + llamada a la API y servicio de almacenamiento
+- Barras de navegación basadas en roles de usuario y servicio de almacenamiento
+- Entidad de categoría + producto y publicar categoría
+- Página de publicación de categoría y API para obtener todas las categorías
+- Crear API para publicar producto y obtener todos los productos
+- Página de publicación de producto, vista previa de imagen y selección de categoría
+- Mostrar productos al administrador y API para obtener todos los productos por nombre
+- Buscar productos por nombre y API completa para eliminar producto
+- Construir carrito de usuario con entidades de pedido y artículos del carrito
+- Página de panel de control para que los clientes busquen productos por nombre
+- Crear API REST para agregar producto al carrito en Spring Boot
+- API para obtener el carrito por usuario
+- Crear una página para ver los detalles del carrito en Angular
+- Entidad de cupón, API para publicar cupón y API para obtener todos los cupones
+- Crear páginas para publicar cupón y obtener todos los cupones
+- Crear API completa para aplicar código de cupón
+- API completa para aumentar la cantidad de producto en el carrito
+- API para realizar pedido y disminuir la cantidad de producto en el carrito
+- Crear API REST para obtener todos los pedidos y página para realizar pedido
+- Crear API para actualizar el estado del pedido y página para mostrar pedidos
+- Crear API para obtener pedidos por usuario y API para cambiar el estado
+- Crear entidad de preguntas frecuentes y página para mostrar los pedidos del usuario
+- Crear API completa para crear preguntas frecuentes y página
+- Crear API para obtener producto por ID y actualizar detalles del producto
+- Crear una página para actualizar producto con formulario y llamada a la API
+- Crear entidad de reseña y obtener productos pedidos por pedido
+- Crear una página para ver los detalles de los productos pedidos
+- Crear API REST para publicar reseña con DTO de reseña
+- Crear página para publicar reseña y entidad de lista de deseos
+- Crear API para obtener detalles del producto con reseñas y preguntas frecuentes
+- Crear una página para mostrar detalles del producto con reseñas y preguntas frecuentes
+- Crear API para agregar producto a la lista de deseos del usuario con DTO
+- API para obtener productos de la lista de deseos por usuario y API para agregar a la lista de deseos
+- Crear API para rastrear pedido y página para mostrar productos de la lista de deseos
+- Crear una página/componente de seguimiento de pedidos con cuadro de búsqueda
+- Crear API para obtener análisis de pedidos y ganancias
+- Crear una página para mostrar análisis de pedidos y ganancias
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+- Creating JWT Utility & Request Filter
+- Login API & User Details Service
+- Sign up API + Web Security & admin account
+- Creating sign up page + API call & Auth Service
+- Creacting Login page + API call & Storage Service
+- User Role-Based Navbars y Storage service
+- Category + product entity & Post Category
+- Post Category page & Get All categories API
+- Creating Post Product & Get All products APIs
+- Post Product Page, Image preview, & category selection
+- Showing Products to Admin & All Products by name API
+- Search products by name & full stack delete product API
+- Building User cart with order and cart items entities
+- dashboard Page for customers to search products by name
+- Creating add product to cart rest API in springboot
+- Get cart by user API
+- Creating a page to view cart details in angular
+- Coupon Entity, Coupon post api and get all coupons api
+- Creating pages for post coupon & get all coupons
+- Creating full stack aplly coupon code API
+- full stack API to increase product quantity in cart
+- place order API & Decrease product quantity in cart
+- Creating get all orders rest api and page to place order
+- Creating update order status api & page to show orders
+- Creating Get orders by user api & change status api
+- Creating faq entity and page to show user's orders
+- Creating full stack create FAQ API and page
+- Creating get produc by id and update product details APIs
+- Creating a page to update product with form & API call
+- Creating review entity & get ordered proucts by order
+- creating a page to view ordered products details
+- creating post review rest api with review dto
+- creating page to post review and wishlist entity
+- creating api to get product details with reviews & faqs
+- creating a page to show product details with reviews y faqs
+- creating API to add product in user's wishlist with Dto
+- API to get wishlist products by user and add to wishlist API
+- creating tracking order api and page to show wishlist products
+- creating an order tracking page/component with search box
+- creating api to get analytics of orders and earnings
+- creating a page to show analytics of orders an earnings
+-
